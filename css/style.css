@@ -4,3 +4,26 @@
     border: 2px blue solid;
     padding: 20px;
 }
+
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 2px green solid;
+}
+
+.table-row:hover {
+    background-color: grey;
+}
+
+.table-row__cell {
+    padding: 5px;
+    border: 1px black dotted;
+}
+
+.table-row__properties {
+    display: inline-block;
+    border: 1px blue dashed;
+    margin-left: 40%;
+    margin-top: 10px;
+}
