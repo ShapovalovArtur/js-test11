@@ -7,6 +7,7 @@
 
 .table-row {
     display: flex;
+    position: relative;
     justify-content: space-between;
     padding: 10px;
     border: 2px green solid;
@@ -22,10 +23,12 @@
 }
 
 .table-row__properties {
+    position: absolute;
     display: inline-block;
     border: 1px blue dashed;
-    margin-left: 40%;
-    margin-top: 10px;
+    background-color: grey;
+    top: 100%;
+    left: 40%;
 }
 
 .hidden {
