@@ -42,3 +42,21 @@ var smallArr = [
         description: 'Xers mrr...'
     }
 ]
+
+var table = document.querySelector('.table-container');
+var rowTemplate = document.querySelector('row-template').content.querySelector('.table-row');
+
+
+var renderPicture = function (i) {
+    var picture = pictureTemplate.cloneNode(true);
+    var pictureImg = picture.querySelector('.picture__img');
+    var pictureLikes = picture.querySelector('.picture__likes');
+    var pictureComments = picture.querySelector('.picture__comments');
+    pictureImg.src = picturesArr[i].url;
+    pictureLikes.textContent = picturesArr[i].likes;
+    pictureComments.textContent = picturesArr[i].comments.length;
+    picture.addEventListener('click', function () {
+        window.preview.previewClickHandler(picture, i, picturesArr);
+    });
+    return picture;
+};
