@@ -48,8 +48,8 @@ var rowTemplate = document.querySelector('row-template').content.querySelector('
 
 
 var renderPicture = function (i) {
-    var picture = pictureTemplate.cloneNode(true);
-    var pictureImg = picture.querySelector('.picture__img');
+    var row = rowTemplate.cloneNode(true);
+    var rowId = row.querySelector('.id');
     var pictureLikes = picture.querySelector('.picture__likes');
     var pictureComments = picture.querySelector('.picture__comments');
     pictureImg.src = picturesArr[i].url;
