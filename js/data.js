@@ -44,14 +44,21 @@ var smallArr = [
 ]
 
 var table = document.querySelector('.table-container');
-var rowTemplate = document.querySelector('row-template').content.querySelector('.table-row');
+var rowTemplate = document.querySelector('#row-template').content.querySelector('.table-row');
 
 
 var renderPicture = function (i) {
     var row = rowTemplate.cloneNode(true);
     var rowId = row.querySelector('.id');
-    var pictureLikes = picture.querySelector('.picture__likes');
-    var pictureComments = picture.querySelector('.picture__comments');
+    var firstName = row.querySelector('.firstname');
+    var lastName = row.querySelector('.lastname');
+    var email = row.querySelector('.email');
+    var phone = row.querySelector('.phone');
+    var decription = row.querySelector('.decription');
+    var streetaddress = row.querySelector('.streetAddress');
+    var city = row.querySelector('.city');
+    var state = row.querySelector('.state');
+    var zip = row.querySelector('.zip');
     pictureImg.src = picturesArr[i].url;
     pictureLikes.textContent = picturesArr[i].likes;
     pictureComments.textContent = picturesArr[i].comments.length;
